@@ -7,6 +7,7 @@ public class Car {
     Double engineDisplacement; //in liters ex 2.5
     String engineType; //type of an engine ex To Dopiero Idzie
     public String color;
+    Double value;
 
     public Car(String producer, String model){
         this.producer = producer;

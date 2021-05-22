@@ -7,10 +7,29 @@ public class Human {
     String lastName;
     Phone phone;
     Animal pet;
-    Car car;
+    private Car car;
     private Double salary;
 
+    public Car getCar(){
+        if(car!=null){
+            System.out.println(car.producer);
+            System.out.println(car.model);
+            System.out.println(car.engineDisplacement);
+            System.out.println(car.engineType);
+            System.out.println(car.color);
+            System.out.println(car.value);
+        }
+        return this.car;
+    }
 
+    public void setCar(String p, String m, Double eD, String eT, String c, Double v){
+        Car car2= new Car(p, m);
+        car2.engineDisplacement = eD;
+        car2.engineType = eT;
+        car2.color = c;
+        car2.value = v;
+        this.car = car2;
+    }
 
     public double getSalary(){
         System.out.println(new Date());

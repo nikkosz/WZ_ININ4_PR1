@@ -15,7 +15,7 @@ public class Main {
         audi.engineDisplacement=2.5;
         audi.engineType="TDI";
         audi.color="Metalic Grey/Silver";
-
+        audi.value=12000.00;
 
         System.out.println(spacer);
         System.out.println(dog.name + " " + dog.spieces);
@@ -32,7 +32,7 @@ public class Main {
         waldek.pet = dog;
         waldek.firstName = "Waldek";
         waldek.lastName = "Kiepski";
-        waldek.car = audi;
+
 
 
         waldek.setSalary(2850.10);
@@ -54,13 +54,13 @@ public class Main {
         System.out.println(spacer);
 
         System.out.println("Auto Waldka to: ");
-        System.out.println(waldek.car.producer);
-        System.out.println(waldek.car.model);
-        System.out.println(waldek.car.engineDisplacement+" "+waldek.car.engineType);
-        System.out.println(waldek.car.color);
+        System.out.println(waldek.getCar());
 
         System.out.println(spacer);
 
+
+        waldek.setCar("AUDI", "A6", 2.5, "TDI", "Metalic Grey/Silver", 12000.00);
+        System.out.println(waldek.getCar());
 
     }
 }
