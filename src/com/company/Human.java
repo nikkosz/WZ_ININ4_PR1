@@ -14,7 +14,9 @@ public class Human {
     private Double salary;
 
     public Car getCar(){
-        if(car!=null){
+        if(car==null){
+           System.out.println("Brak auta");
+        }else {
             System.out.println(car.producer);
             System.out.println(car.model);
             System.out.println(car.engineDisplacement);

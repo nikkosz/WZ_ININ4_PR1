@@ -11,11 +11,11 @@ public class Main {
 //        dog.weight = 12.0;
 //        dog.spieces = "canis familiaris";
         System.out.println(spacer);
-        Car audi = new Car("Audi","A6");
-        audi.engineDisplacement=2.5;
-        audi.engineType="TDI";
-        audi.color="Metalic Grey/Silver";
-        audi.value=12000.00;
+        Car audi = new Car("Audi", "A6");
+        audi.engineDisplacement = 2.5;
+        audi.engineType = "TDI";
+        audi.color = "Metalic Grey/Silver";
+        audi.value = 12000.00;
 
         System.out.println(spacer);
         System.out.println(dog.name + " " + dog.spieces);
@@ -34,7 +34,6 @@ public class Main {
         waldek.lastName = "Kiepski";
 
 
-
         waldek.setSalary(2850.10);
         System.out.println(waldek.pet.spieces);
 
@@ -48,7 +47,7 @@ public class Main {
         dog.takeForAWalk(300.0);
         System.out.println(spacer);
 
-        System.out.println("wypłata teraz: "+waldek.getSalary());
+        System.out.println("wypłata teraz: " + waldek.getSalary());
         waldek.giveRaise(-100.0);
 
         System.out.println(spacer);
@@ -58,9 +57,22 @@ public class Main {
 
         System.out.println(spacer);
 
+        System.out.println("Samochód waldka po secie to:");
+        if (waldek.getSalary() >= audi.value) {
+            System.out.println("waldka stać na gotówke to i na ten samochód");
+            waldek.setCar("AUDI", "A6", 2.5, "TDI", "Metalic Grey/Silver", 12000.00);
+            System.out.println(waldek.getCar());
+        } else if (waldek.getSalary()>= 0.12* audi.value ){
+            System.out.println("Udało się z kredytem ale cóz");
+            waldek.setCar("AUDI", "A6", 2.5, "TDI", "Metalic Grey/Silver", 12000.00);
+            System.out.println(waldek.getCar());
+        }else
+        {
+            System.out.println("GET A BETTER JOB, RAISE, OR EDUCATION. PLEB ");
+            System.out.println(waldek.getCar());
+        }
 
-        waldek.setCar("AUDI", "A6", 2.5, "TDI", "Metalic Grey/Silver", 12000.00);
-        System.out.println(waldek.getCar());
+
 
     }
 }
