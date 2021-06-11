@@ -19,6 +19,7 @@ public class Human {
         }else {
             System.out.println(car.producer);
             System.out.println(car.model);
+            System.out.println(car.yearOfProduction);
             System.out.println(car.engineDisplacement);
             System.out.println(car.engineType);
             System.out.println(car.color);
@@ -27,8 +28,8 @@ public class Human {
         return this.car;
     }
 
-    public void setCar(String p, String m, Double eD, String eT, String c, Double v){
-        Car car2= new Car(p, m);
+    public void setCar(String p, String m, Integer y, Double eD, String eT, String c, Double v){
+        Car car2= new Car(p, m, y);
         car2.engineDisplacement = eD;
         car2.engineType = eT;
         car2.color = c;
