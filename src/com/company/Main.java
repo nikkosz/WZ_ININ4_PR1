@@ -20,15 +20,15 @@ public class Main {
         System.out.println(spacer);
         System.out.println(dog.name + " " + dog.spieces);
 
-        dog.printName();
-        dog.printNameAndOwner("Waldek");
+       dog.printName();
+       dog.printNameAndOwner("Waldek");
 
         String text = dog.getNameAndOwner("Waldek");
-        System.out.println(text);
+           System.out.println(text);
 
         System.out.println(spacer);
 
-        Human waldek = new Human();
+        Human waldek = new Human("HomoSapiens");
         waldek.pet = dog;
         waldek.firstName = "Waldek";
         waldek.lastName = "Kiepski";

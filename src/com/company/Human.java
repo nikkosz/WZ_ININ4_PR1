@@ -5,13 +5,17 @@ import com.company.devices.Phone;
 
 import java.util.Date;
 
-public class Human {
+public class Human extends Animal{
     String firstName;
     String lastName;
     Phone phone;
     Animal pet;
     private Car car;
     private Double salary;
+
+    public Human(String spieces) {
+        super(spieces);
+    }
 
     public Car getCar(){
         if(car==null){
