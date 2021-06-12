@@ -6,7 +6,13 @@ public class Phone extends Device{
     Double screenSize;
     String os;
 
-    public String turnOn(){
-        return "to dla device";
+    public Phone(String producer, String model, Integer yearOfProduction) {
+        super(producer, model, yearOfProduction);
+    }
+
+    @Override
+    public void turnOn(){
+
+        System.out.println("Po godzinahcn mizernego ładowania - odpalił");
     }
 }

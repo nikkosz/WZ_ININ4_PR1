@@ -9,13 +9,14 @@ public class Car extends Device{
     public Double value;
 
     public Car(String producer, String model, Integer yearOfProduction){
+        super(producer, model, yearOfProduction);
         this.producer = producer;
         this.model = model;
         this.yearOfProduction = yearOfProduction;
     }
-
-    public String turnOn(){
-        return "to dla device";
+    @Override
+    public void turnOn(){
+        System.out.println("Nooooo odpal żeś w końcu");
     }
 
 }

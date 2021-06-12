@@ -57,6 +57,12 @@ public class Main {
 
         System.out.println(spacer);
 
+        System.out.println(waldek instanceof Animal);
+        System.out.println(waldek instanceof Human);
+        System.out.println(waldek instanceof Object);
+
+
+        System.out.println(spacer);
         System.out.println("Samochód waldka po secie to:");
         if (waldek.getSalary() >= audi.value) {
             System.out.println("waldka stać na gotówke to i na ten samochód");
