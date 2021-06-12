@@ -1,11 +1,11 @@
-package com.company;
+package com.company.creatures;
 
 import java.sql.SQLOutput;
 
 public class Animal {
     final public String spieces;
     private Double weight;
-    String name;
+    public String name;
 
     public Animal(String spieces) {
         this.spieces = spieces;
@@ -23,24 +23,24 @@ public class Animal {
         }
     }
 
-    void printName() {
+    public void printName() {
         System.out.println("My name is: " + this.name);
     }
 
-    void printNameAndOwner(String owner) {
+    public void printNameAndOwner(String owner) {
         System.out.println(owner + " has " + this.name);
     }
 
-    Double getWeight() {
+    public Double getWeight() {
         return this.weight;
     }
 
 
-    String getNameAndOwner(String owner) {
+    public String getNameAndOwner(String owner) {
         return owner + " has " + this.name;
     }
 
-    void feed(Double food) {
+    public void feed(Double food) {
         if(this.weight>0) {
 
             Double gain = food / 7.8;
@@ -53,7 +53,7 @@ public class Animal {
 
     }
 
-    void takeForAWalk(Double time) {
+    public void takeForAWalk(Double time) {
         Double weightLoos = time / 100;
         this.weight -= weightLoos;
         if (this.weight == 0) {
