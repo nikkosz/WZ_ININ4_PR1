@@ -17,6 +17,8 @@ public class Human extends Animal {
         super(spieces);
     }
 
+
+
     public Car getCar(){
         if(car==null){
            System.out.println("Brak auta");

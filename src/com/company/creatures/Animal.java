@@ -1,10 +1,11 @@
 package com.company.creatures;
 
 import com.company.Selleable;
+import com.ibm.dtfj.corereaders.zos.le.Edb;
 
 import java.sql.SQLOutput;
 
-public class Animal implements Selleable {
+public class Animal  implements Selleable {
     final public String spieces;
     private Double weight;
     public String name;
@@ -65,6 +66,11 @@ public class Animal implements Selleable {
         }
     }
 
+
+
+
+
+
     @Override
     public void sell(Human seller, Human buyer, Double price) {
         if(this instanceof Human){
@@ -85,3 +91,12 @@ public class Animal implements Selleable {
         }
     }
 }
+class FarmAnimal implements Edbile{
+    @Override
+    public void beEaten() {
+
+    }
+}
+class Pet {
+}
+
