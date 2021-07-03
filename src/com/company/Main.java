@@ -4,11 +4,15 @@ import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.creatures.Human;
 
-public class Main {
+public class Main extends Animal {
+
+    public Main(String spieces) {
+        super(spieces);
+    }
 
     public static void main(String[] args) {
         String spacer = "---------------------------------------";
-        Animal dog = new Animal("canis familiaris");
+        Animal dog = new Main("canis familiaris");
         dog.name = "Szarik";
 //        dog.weight = 12.0;
 //        dog.spieces = "canis familiaris";
@@ -81,6 +85,16 @@ public class Main {
         }
 
 
+
+    }
+
+    @Override
+    public void feed() {
+
+    }
+
+    @Override
+    public void feedFoodWEight() {
 
     }
 }

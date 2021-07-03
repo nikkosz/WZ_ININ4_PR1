@@ -1,5 +1,7 @@
 package com.company.devices;
 
+import com.company.creatures.Human;
+
 public class Car extends Device{
 
 
@@ -19,4 +21,8 @@ public class Car extends Device{
         System.out.println("Nooooo odpal żeś w końcu");
     }
 
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+
+    }
 }

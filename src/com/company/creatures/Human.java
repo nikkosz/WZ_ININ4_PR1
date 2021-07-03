@@ -78,5 +78,14 @@ public class Human extends Animal {
 
     }
 
+    @Override
+    public void feed() {
+        
+    }
+
+    @Override
+    public void feedFoodWEight() {
+
+    }
 }
 

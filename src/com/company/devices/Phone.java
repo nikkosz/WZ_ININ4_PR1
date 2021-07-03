@@ -1,5 +1,7 @@
 package com.company.devices;
 
+import com.company.creatures.Human;
+
 public class Phone extends Device implements Rechargeable{
     String producent;
     String model;
@@ -26,5 +28,10 @@ public class Phone extends Device implements Rechargeable{
     @Override
     public Double getBatteryLevel(){
         return 0.1;
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+
     }
 }

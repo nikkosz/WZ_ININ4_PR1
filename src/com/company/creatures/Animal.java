@@ -5,7 +5,7 @@ import com.ibm.dtfj.corereaders.zos.le.Edb;
 
 import java.sql.SQLOutput;
 
-public class Animal  implements Selleable {
+public abstract class Animal  implements Selleable, Feedable {
     final public String spieces;
     private Double weight;
     public String name;
@@ -25,6 +25,7 @@ public class Animal  implements Selleable {
                 break;
         }
     }
+
 
     public void printName() {
         System.out.println("My name is: " + this.name);
