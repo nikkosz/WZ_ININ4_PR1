@@ -1,8 +1,10 @@
 package com.company.creatures;
 
+import com.company.Selleable;
+
 import java.sql.SQLOutput;
 
-public class Animal {
+public class Animal implements Selleable {
     final public String spieces;
     private Double weight;
     public String name;
@@ -60,6 +62,22 @@ public class Animal {
             System.out.println("No i zdechł");
         } else {
             System.out.println("Stracił: " + weightLoos);
+        }
+    }
+
+    @Override
+    public void sell(Human seller, Human buyer, Double price) {
+        if(seller.pet != this){
+            System.out.println("Nie masz zwierzaka chłopcze");
+        }
+        else if(buyer.cash < price){
+            System.out.println("No nie stać Cię kolego");
+        }else{
+            buyer.pet = this;
+            seller.pet = null;
+            buyer.cash -= price;
+            seller.cash += price;
+            System.out.println("No i niemiec płakał jak sprzedawał");
         }
     }
 }

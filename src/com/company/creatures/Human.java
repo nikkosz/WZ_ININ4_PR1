@@ -12,7 +12,7 @@ public class Human extends Animal {
     public Animal pet;
     private Car car;
     private Double salary;
-
+    public Double cash = 3500.00;
     public Human(String spieces) {
         super(spieces);
     }
