@@ -67,7 +67,11 @@ public class Animal implements Selleable {
 
     @Override
     public void sell(Human seller, Human buyer, Double price) {
-        if(seller.pet != this){
+        if(this instanceof Human){
+            System.out.println("No chyba nie sprzedajesz człowieka???");
+        }
+
+        else if(seller.pet != this){
             System.out.println("Nie masz zwierzaka chłopcze");
         }
         else if(buyer.cash < price){
