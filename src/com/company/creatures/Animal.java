@@ -3,7 +3,7 @@ package com.company.creatures;
 import com.company.Selleable;
 import com.ibm.dtfj.corereaders.zos.le.Edb;
 
-import java.sql.SQLOutput;
+
 
 public abstract class Animal  implements Selleable, Feedable {
     final public String spieces;

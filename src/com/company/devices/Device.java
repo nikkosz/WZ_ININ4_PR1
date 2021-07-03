@@ -1,6 +1,7 @@
 package com.company.devices;
 
 import com.company.Selleable;
+import com.company.creatures.Human;
 
 public abstract class Device implements Selleable {
     public String producer;
@@ -14,6 +15,8 @@ public abstract class Device implements Selleable {
         this.model = model;
         this.yearOfProduction = yearOfProduction;
     }
+
+
 
     public abstract void turnOn();
 
