@@ -53,8 +53,8 @@ public class Main extends Animal {
         waldek.pet = dog;
         waldek.firstName = "Waldek";
         waldek.lastName = "Kiepski";
-
-        waldek.setCar(audi);
+        boolean usun = false;
+        waldek.setCar(audi,usun);
 
 
         waldek.setSalary(2850.10);

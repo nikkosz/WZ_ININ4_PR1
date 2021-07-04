@@ -15,7 +15,7 @@ public class Human extends Animal {
     private Double salary;
     public Double cash = 3500.00;
     public int garageSize =2;
-    private ArrayList<Car> Garage;
+    public ArrayList<Car> Garage;
     public Human(String spieces) {
         super(spieces);
         Garage = new ArrayList<>();
@@ -49,9 +49,16 @@ public class Human extends Animal {
             return this.Garage.get(parkingSpace);
     }
 
-    public void setCar(Car car){
+    public void setCar(Car car, boolean usun){
 
-        if(Garage.size() <garageSize){
+        if(usun) {
+            for (int i = 0; i < garageSize; i++) {
+                if (car == Garage.get(i)){
+                    Garage.set(i, null);
+                }
+            }
+        }
+        else if(Garage.size() <garageSize){
             Garage.add(car);
         }
         else{
