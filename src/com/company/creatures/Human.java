@@ -35,7 +35,12 @@ public class Human extends Animal {
     }
 
     public void setCar(String p, String m, Integer y, Double eD, String eT, String c, Double v){
-        Car car2= new Car(p, m, y);
+        Car car2= new Car(p, m, y) {
+            @Override
+            public void refuel() {
+
+            }
+        };
         car2.engineDisplacement = eD;
         car2.engineType = eT;
         car2.color = c;

@@ -2,7 +2,7 @@ package com.company.devices;
 
 import com.company.creatures.Human;
 
-public class Car extends Device{
+public abstract class Car extends Device{
 
 
     public Double engineDisplacement; //in liters ex 2.5
@@ -25,4 +25,7 @@ public class Car extends Device{
     public void sell(Human seller, Human buyer, Double price) {
 
     }
+    public abstract void refuel();
+
+
 }

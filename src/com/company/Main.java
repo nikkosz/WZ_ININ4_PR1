@@ -10,6 +10,7 @@ public class Main extends Animal {
         super(spieces);
     }
 
+
     public static void main(String[] args) {
         String spacer = "---------------------------------------";
         Animal dog = new Main("canis familiaris");
@@ -17,7 +18,12 @@ public class Main extends Animal {
 //        dog.weight = 12.0;
 //        dog.spieces = "canis familiaris";
         System.out.println(spacer);
-        Car audi = new Car("Audi", "A6", 2004);
+        Car audi = new Car("Audi", "A6", 2004) {
+            @Override
+            public void refuel() {
+
+            }
+        };
         audi.engineDisplacement = 2.5;
         audi.engineType = "TDI";
         audi.color = "Metalic Grey/Silver";

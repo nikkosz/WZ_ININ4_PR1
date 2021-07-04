@@ -34,4 +34,37 @@ public class Phone extends Device implements Rechargeable{
     public void sell(Human seller, Human buyer, Double price) {
 
     }
+    public static final void defaultAPP(){
+        String name = "Sklep";
+        double version= 1.0;
+        String branch ="stable";
+        String server_url = "app//appshop.eu";
+        String defaultProtocol = "app";
+    }
+
+    public void installAnApp(){
+        String name = "YouTube";
+        double version =3.11;
+        String server_URL = "app//app_add.youtube.pl";
+    }
+    public void installAnApp1(){
+        String name = "Waldek ODBIER!";
+        double version =0.11;
+        String server_URL = "app//waldekodb.com";
+    }
+    public void installAnApp2(){
+        String name = "uniFi";
+        double version =4.5;
+        String server_URL = "app//unifi.com/download/mobile";
+    }
+    public void installAnApp3(){
+        String name = "YouTube Vanced";
+        double version =3.11;
+        String server_URL = "app//vanced.you/mobile";
+    }
+
+
+
+
+
 }
