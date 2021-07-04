@@ -3,6 +3,7 @@ package com.company.creatures;
 import com.company.devices.Car;
 import com.company.devices.Phone;
 
+import java.util.ArrayList;
 import java.util.Date;
 
 public class Human extends Animal {
@@ -10,42 +11,65 @@ public class Human extends Animal {
     public String lastName;
     public Phone phone;
     public Animal pet;
-    private Car car;
+
     private Double salary;
     public Double cash = 3500.00;
+    public int garageSize =2;
+    private ArrayList<Car> Garage;
     public Human(String spieces) {
         super(spieces);
+        Garage = new ArrayList<>();
     }
 
 
 
-    public Car getCar(){
-        if(car==null){
-           System.out.println("Brak auta");
-        }else {
-            System.out.println(car.producer);
-            System.out.println(car.model);
-            System.out.println(car.yearOfProduction);
-            System.out.println(car.engineDisplacement);
-            System.out.println(car.engineType);
-            System.out.println(car.color);
-            System.out.println(car.value);
-        }
-        return this.car;
-    }
+    public Car getCar(int parkingSpace){
 
-    public void setCar(String p, String m, Integer y, Double eD, String eT, String c, Double v){
-        Car car2= new Car(p, m, y) {
-            @Override
-            public void refuel() {
+        if(Garage.get(parkingSpace)== null){
 
+
+                System.out.println("Brak auta");
+            } else {
+                System.out.println(Garage.get(parkingSpace).producer);
+                System.out.println(Garage.get(parkingSpace).model);
+                System.out.println(Garage.get(parkingSpace).yearOfProduction);
+                System.out.println(Garage.get(parkingSpace).color);
+                System.out.println(Garage.get(parkingSpace).engineDisplacement);
+                System.out.println(Garage.get(parkingSpace).engineType);
+                System.out.println(Garage.get(parkingSpace).value);
+                //System.out.println(car.producer);
+                //System.out.println(car.model);
+                //System.out.println(car.yearOfProduction);
+                //System.out.println(car.engineDisplacement);
+                //System.out.println(car.engineType);
+               // System.out.println(car.color);
+                //System.out.println(car.value);
             }
-        };
-        car2.engineDisplacement = eD;
-        car2.engineType = eT;
-        car2.color = c;
-        car2.value = v;
-        this.car = car2;
+            //return this.car;
+            return this.Garage.get(parkingSpace);
+    }
+
+    public void setCar(Car car){
+
+        if(Garage.size() <garageSize){
+            Garage.add(car);
+        }
+        else{
+            System.out.println("Brak miejsca brachu");
+        }
+
+
+        //    Car car2= new Car(p, m, y) {
+    //        @Override
+    //        public void refuel() {
+
+    //        }
+    //    };
+    //    car2.engineDisplacement = eD;
+    //    car2.engineType = eT;
+    //    car2.color = c;
+    //    car2.value = v;
+    //    this.car = car2;
     }
 
     public double getSalary(){
@@ -81,6 +105,13 @@ public class Human extends Animal {
 
 
 
+    }
+    public void checkGarageValue(){
+        float value = 0;
+        for(int i =0; i < garageSize;i++){
+            value += Garage.get(i).value;
+        }
+        System.out.println("wartość aut w garażu: "+ value);
     }
 
     @Override

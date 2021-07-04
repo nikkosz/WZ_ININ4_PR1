@@ -6,7 +6,9 @@ import com.company.creatures.Human;
 public abstract class Device implements Selleable {
     public String producer;
     public String model;
+    public Double values;
     public Integer yearOfProduction;
+
 
     public Device(String producer,
                   String model,

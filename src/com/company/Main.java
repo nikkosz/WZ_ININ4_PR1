@@ -3,12 +3,14 @@ package com.company;
 import com.company.creatures.Animal;
 import com.company.devices.Car;
 import com.company.creatures.Human;
+import java.util.ArrayList;
 
 public class Main extends Animal {
 
     public Main(String spieces) {
         super(spieces);
     }
+
 
 
     public static void main(String[] args) {
@@ -18,7 +20,13 @@ public class Main extends Animal {
 //        dog.weight = 12.0;
 //        dog.spieces = "canis familiaris";
         System.out.println(spacer);
-        Car audi = new Car("Audi", "A6", 2004) {
+        ArrayList<Car> garage;
+
+
+
+
+
+       Car audi = new Car("Audi", "A6", 2004) {
             @Override
             public void refuel() {
 
@@ -28,6 +36,7 @@ public class Main extends Animal {
         audi.engineType = "TDI";
         audi.color = "Metalic Grey/Silver";
         audi.value = 12000.00;
+
 
         System.out.println(spacer);
         System.out.println(dog.name + " " + dog.spieces);
@@ -44,6 +53,8 @@ public class Main extends Animal {
         waldek.pet = dog;
         waldek.firstName = "Waldek";
         waldek.lastName = "Kiepski";
+
+        waldek.setCar(audi);
 
 
         waldek.setSalary(2850.10);
@@ -65,7 +76,8 @@ public class Main extends Animal {
         System.out.println(spacer);
 
         System.out.println("Auto Waldka to: ");
-        System.out.println(waldek.getCar());
+        int parkingSpace = 0;
+        System.out.println(waldek.getCar(parkingSpace));
 
         System.out.println(spacer);
 
@@ -76,19 +88,19 @@ public class Main extends Animal {
 
         System.out.println(spacer);
         System.out.println("Samochód waldka po secie to:");
-        if (waldek.getSalary() >= audi.value) {
-            System.out.println("waldka stać na gotówke to i na ten samochód");
-            waldek.setCar("AUDI", "A6", 2004, 2.5, "TDI", "Metalic Grey/Silver", 12000.00);
-            System.out.println(waldek.getCar());
-        } else if (waldek.getSalary()>= 0.12* audi.value ){
-            System.out.println("Udało się z kredytem ale cóz");
-            waldek.setCar("AUDI", "A6", 2004,2.5, "TDI", "Metalic Grey/Silver", 12000.00);
-            System.out.println(waldek.getCar());
-        }else
-        {
-            System.out.println("GET A BETTER JOB, RAISE, OR EDUCATION. PLEB ");
-            System.out.println(waldek.getCar());
-        }
+       // if (waldek.getSalary() >= audi.value) {
+       //     System.out.println("waldka stać na gotówke to i na ten samochód");
+       //     waldek.setCar("AUDI", "A6", 2004, 2.5, "TDI", "Metalic Grey/Silver", 12000.00);
+       //     System.out.println(waldek.getCar());
+       // } else if (waldek.getSalary()>= 0.12* audi.value ){
+       //     System.out.println("Udało się z kredytem ale cóz");
+       //     waldek.setCar("AUDI", "A6", 2004,2.5, "TDI", "Metalic Grey/Silver", 12000.00);
+       //     System.out.println(waldek.getCar());
+       // }else
+       // {
+       //     System.out.println("GET A BETTER JOB, RAISE, OR EDUCATION. PLEB ");
+       //     System.out.println(waldek.getCar());
+      //  }
 
 
 
